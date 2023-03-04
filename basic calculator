@@ -1,0 +1,37 @@
+import time as t
+
+def multiply(x, y):
+    return x * y
+
+def add(x, y):
+    return x+y
+
+def subtract(x, y):
+    return x-y
+
+def divide(x, y):
+    return x/y
+
+print("choose your operation.")
+t.sleep(1)
+print("operations: add(1)"
+      "            subtract(2)"
+      "            multiply(3)"
+      "            divide(4)")
+
+while True:
+    user  = input("> ")
+    if user in ('1', '2', '3', '4'):
+        num1 = float(input("Enter First Number: "))
+        num2 = float(input("Enter Second Number: "))
+        if user == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+        elif user == '2':
+            print((num1, "-", num2, "=", subtract(num1, num2)))
+        elif user == '3':
+            print((num1, "*", num2, "=", multiply(num1, num2)))
+        elif user == '2':
+            print((num1, "/", num2, "=", divide(num1, num2)))
+        break
+    else:
+        print("Invalid operation or invalid input.")
